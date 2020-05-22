@@ -139,8 +139,8 @@ void second_phase(int *fd, long int id) {
 
 	struct timespec remaining;
 
-	t.tv_sec = 10;  // seconds
-	t.tv_nsec = 0; // nanoseconds
+	t.tv_sec = 0;  // seconds
+	t.tv_nsec = 100; // nanoseconds
 
 	printf("FASE 2, thread id = %ld dopo la barriera\n", id);
 	if (nanosleep(&t, &remaining) == -1) {
